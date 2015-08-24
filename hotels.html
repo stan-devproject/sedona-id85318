@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Седона</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <nav class="navigation-top">
+      <ul>
+        <li>
+          <a href="#">Информация</a>
+        </li>
+        <li>
+          <a href="#">Фото и видео</a>
+        </li>
+        <li>
+          <a href="#">Карта штата</a>
+        </li>
+        <li>
+          <a href="#">Гостиницы</a>
+        </li>
+      </ul>
+      <img class="logo-top" src="img/logo-top.png" width="138" height="70" alt="">
+    </nav>
+
+    <form class="form-filter clearfix" action="#" method="get">
+      <section class="checkbox-block">
+        <!-- Можно ли использовать h2, если не было h1? -->
+        <h2>Инфраструктура:</h2>
+        <label><input type="checkbox" checked>Бассейн</label>
+        <label><input type="checkbox">Парковка</label>
+        <label><input type="checkbox">Wi-Fi</label>
+      </section>
+
+      <section class="checkbox-block">
+        <!-- Можно ли использовать h2, если не было h1? -->
+        <h2>Тип жилья:</h2>
+        <label><input type="checkbox" checked>Гостиница</label>
+        <label><input type="checkbox" checked>Мотель</label>
+        <label><input type="checkbox" checked>Апартаменты</label>
+      </section>
+
+      <section class="show-block">
+        <!-- Можно ли использовать h2, если не было h1? -->
+        <h2>Стоимость в сутки (Р):</h2>
+        <!-- Реализую вместе с CSS этот блок, как разберусь -->
+        <input type="range" min="0" max="3000">
+        <!-- Нужно <button> или <input type="submit"> использовать? В чем разница? -->
+        <button class="filter-submit" type="submit">Показать</button>
+      </section>
+    </form>
+
+    <div class="search-results">
+      <div class="search-settings clearfix">
+        <div class="search-count">Найдено: 3</div>
+        <div class="search-sort">
+          <h3>Сортировка:</h3>
+          <a href="#">по цене</a>
+          <a href="#">по типу</a>
+          <a href="#">по рейтингу</a>
+        </div>
+        <div class="search-order">
+          <a class="order-up" href="#">вверх</a>
+          <a class="order-down" href="#">вниз</a>
+        </div>
+      </div>
+
+      <section class="hotel-item clearfix">
+        <img class="hotel-image" src="" alt="">
+        <div class="hotel-info">
+          <h2>Amara Resort & SPA</h2>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer-attached clearfix">
+      <h2 class="footer-hash">#visitsedona</h2>
+      <div class="social-buttons">
+        <a class="social-twitter" href="#"></a>
+        <a class="social-facebook" href="#"></a>
+        <a class="social-youtube" href="#"></a>
+      </div>
+      <div class="copyright">
+        <a href="#"><img src="" alt=""></a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

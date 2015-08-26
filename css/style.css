@@ -1,0 +1,19 @@
+body {
+  font-size: 15px;
+  line-height: 24px;
+  color: #333;
+  font-weight: 400;
+  font-family: "PTSans", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.intro-text-title {
+  color: black;
+  font-size: 21px;
+}
+
+.search-title {
+  color: black;
+  font-size: 30px;
+  line-height: 30px;
+}

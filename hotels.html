@@ -30,136 +30,112 @@
 
     <div class="form-filter">
       <form class="clearfix" action="#" method="get">
-        <fieldset class="checkbox-block">
-          <div class="fieldset-title">Инфраструктура:</div>
+        <section class="checkbox-block">
+          <h2 class="fieldset-title">Инфраструктура:</h2>
           <label><input type="checkbox" checked>Бассейн</label>
           <label><input type="checkbox">Парковка</label>
           <label><input type="checkbox">Wi-Fi</label>
-        </fieldset>
+        </section>
 
-        <fieldset class="checkbox-block">
-          <div class="fieldset-title">Тип жилья:</div>
+        <section class="checkbox-block">
+          <h2 class="fieldset-title">Тип жилья:</h2>
           <label><input type="checkbox" checked>Гостиница</label>
           <label><input type="checkbox" checked>Мотель</label>
           <label><input type="checkbox" checked>Апартаменты</label>
-        </fieldset>
+        </section>
 
-        <fieldset class="show-block">
-          <div class="fieldset-title">Стоимость в сутки (Р):</div>
+        <section class="show-block">
+          <h2 class="fieldset-title">Стоимость в сутки (Р):</h2>
           <!-- Реализую вместе с CSS этот блок, как разберусь -->
           <input type="range" min="0" max="3000">
           <button class="filter-submit" type="submit">Показать</button>
-        </fieldset>
+        </section>
       </form>
     </div>
 
     <div class="search-results">
       <div class="search-settings clearfix">
-        <div class="search-column-first">
-          <div class="search-count">Найдено: 3</div>
+        <div class="search-column-first search-count">Найдено: 3</div>
+        <div class="search-column-middle search-sort">
+          <div class="search-sort-title">Сортировка:</div>
+          <ul>
+            <li><a href="#">по цене</a></li>
+            <li><a href="#">по типу</a></li>
+            <li><a href="#">по рейтингу</a></li>
+          </ul>
         </div>
-        <div class="search-column-middle">
-          <div class="search-sort">
-            <div class="search-sort-title">Сортировка:</div>
-            <ul>
-              <li><a href="#">по цене</a></li>
-              <li><a href="#">по типу</a></li>
-              <li><a href="#">по рейтингу</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="search-column-last">
-          <div class="search-order">
-            <a class="order-up" href="#">вверх</a>
-            <a class="order-down" href="#">вниз</a>
-          </div>
+        <div class="search-column-last search-order">
+          <a class="order-up" href="#">вверх</a>
+          <a class="order-down" href="#">вниз</a>
         </div>
       </div>
 
       <section class="hotel-item clearfix">
-        <div class="search-column-first">
-          <div class="hotel-image">
-            <img src="img/hotel-photo-1.jpg" alt="" width="135" height="90">
-          </div>
+        <div class="search-column-first hotel-image">
+          <img src="img/hotel-photo-1.jpg" alt="" width="135" height="90">
         </div>
-        <div class="search-column-middle">
-          <div class="hotel-info">
-            <h2>Amara Resort & SPA</h2>
-            <div class="container clearfix">
-              <div class="info-left">
-                <div class="hotel-type">Гостиница</div>
-                <button class="btn btn-more">Подробнее</button>
-              </div>
-              <div class="info-right">
-                <div class="hotel-cost">от 3500 р.</div>
-                <button class="btn btn-book">Забронировать</button>
-              </div>
+        <div class="search-column-middle hotel-info">
+          <h2>Amara Resort & SPA</h2>
+          <div class="container clearfix">
+            <div class="info-left">
+              <div class="hotel-type">Гостиница</div>
+              <button class="btn btn-more">Подробнее</button>
+            </div>
+            <div class="info-right">
+              <div class="hotel-cost">от 3500 р.</div>
+              <button class="btn btn-book">Забронировать</button>
             </div>
           </div>
         </div>
-        <div class="search-column-last">
-          <div class="hotel-status">
-            <div class="stars">★★★★</div>
-            <div class="rating">Рейтинг: 8,5</div>
-          </div>
+        <div class="search-column-last hotel-status">
+          <div class="stars">★★★★</div>
+          <div class="rating">Рейтинг: 8,5</div>
         </div>
       </section>
 
       <section class="hotel-item clearfix">
-        <div class="search-column-first">
-          <div class="hotel-image">
-            <img src="img/hotel-photo-2.jpg" alt="" width="135" height="90">
-          </div>
+        <div class="search-column-first hotel-image">
+          <img src="img/hotel-photo-2.jpg" alt="" width="135" height="90">
         </div>
-        <div class="search-column-middle">
-          <div class="hotel-info">
-            <h2>Desert Quail Inn</h2>
-            <div class="container clearfix">
-              <div class="info-left">
-                <div class="hotel-type">Мотель</div>
-                <button class="btn btn-more">Подробнее</button>
-              </div>
-              <div class="info-right">
-                <div class="hotel-cost">от 2000 р.</div>
-                <button class="btn btn-book">Забронировать</button>
-              </div>
+        <div class="search-column-middle hotel-info">
+          <h2>Desert Quail Inn</h2>
+          <div class="container clearfix">
+            <div class="info-left">
+              <div class="hotel-type">Мотель</div>
+              <button class="btn btn-more">Подробнее</button>
+            </div>
+            <div class="info-right">
+              <div class="hotel-cost">от 2000 р.</div>
+              <button class="btn btn-book">Забронировать</button>
             </div>
           </div>
         </div>
-        <div class="search-column-last">
-          <div class="hotel-status">
-            <div class="stars">★★</div>
-            <div class="rating">Рейтинг: 8,9</div>
-          </div>
+        <div class="search-column-last hotel-status">
+          <div class="stars">★★</div>
+          <div class="rating">Рейтинг: 8,9</div>
         </div>
       </section>
 
       <section class="hotel-item clearfix">
-        <div class="search-column-first">
-          <div class="hotel-image">
-            <img src="img/hotel-photo-3.jpg" alt="" width="135" height="90">
-          </div>
+        <div class="search-column-first hotel-image">
+          <img src="img/hotel-photo-3.jpg" alt="" width="135" height="90">
         </div>
-        <div class="search-column-middle">
-          <div class="hotel-info">
-            <h2>Villas at Poco Diablo</h2>
-            <div class="container clearfix">
-              <div class="info-left">
-                <div class="hotel-type">Апартаменты</div>
-                <button class="btn btn-more">Подробнее</button>
-              </div>
-              <div class="info-right">
-                <div class="hotel-cost">от 4000 р.</div>
-                <button class="btn btn-book">Забронировать</button>
-              </div>
+        <div class="search-column-middle hotel-info">
+          <h2>Villas at Poco Diablo</h2>
+          <div class="container clearfix">
+            <div class="info-left">
+              <div class="hotel-type">Апартаменты</div>
+              <button class="btn btn-more">Подробнее</button>
+            </div>
+            <div class="info-right">
+              <div class="hotel-cost">от 4000 р.</div>
+              <button class="btn btn-book">Забронировать</button>
             </div>
           </div>
         </div>
-        <div class="search-column-last">
-          <div class="hotel-status">
-            <div class="stars">★★★</div>
-            <div class="rating">Рейтинг: 9,2</div>
-          </div>
+        <div class="search-column-last hotel-status">
+          <div class="stars">★★★</div>
+          <div class="rating">Рейтинг: 9,2</div>
         </div>
       </section>
     </div>

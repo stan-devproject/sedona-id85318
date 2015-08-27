@@ -29,7 +29,7 @@
     </header>
 
     <div class="form-filter">
-      <form action="#" method="get">
+      <form class="clearfix" action="#" method="get">
         <fieldset class="checkbox-block">
           <div class="fieldset-title">Инфраструктура:</div>
           <label><input type="checkbox" checked>Бассейн</label>
@@ -55,79 +55,111 @@
 
     <div class="search-results">
       <div class="search-settings clearfix">
-        <div class="search-count">Найдено: 3</div>
-        <div class="search-sort">
-          <h3>Сортировка:</h3>
-          <a href="#">по цене</a>
-          <a href="#">по типу</a>
-          <a href="#">по рейтингу</a>
+        <div class="search-column-first">
+          <div class="search-count">Найдено: 3</div>
         </div>
-        <div class="search-order">
-          <a class="order-up" href="#">вверх</a>
-          <a class="order-down" href="#">вниз</a>
+        <div class="search-column-middle">
+          <div class="search-sort">
+            <div class="search-sort-title">Сортировка:</div>
+            <ul>
+              <li><a href="#">по цене</a></li>
+              <li><a href="#">по типу</a></li>
+              <li><a href="#">по рейтингу</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="search-column-last">
+          <div class="search-order">
+            <a class="order-up" href="#">вверх</a>
+            <a class="order-down" href="#">вниз</a>
+          </div>
         </div>
       </div>
 
       <section class="hotel-item clearfix">
-        <div class="hotel-image"><img src="img/hotel-photo-1.jpg" alt="" width="135" height="90"></div>
-        <div class="hotel-info">
-          <h2>Amara Resort & SPA</h2>
-          <div class="container clearfix">
-            <div class="info-left">
-              <div class="hotel-type">Гостиница</div>
-              <button class="btn btn-more">Подробнее</button>
-            </div>
-            <div class="info-right">
-              <div class="hotel-cost">от 3500 р.</div>
-              <button class="btn btn-book">Забронировать</button>
+        <div class="search-column-first">
+          <div class="hotel-image">
+            <img src="img/hotel-photo-1.jpg" alt="" width="135" height="90">
+          </div>
+        </div>
+        <div class="search-column-middle">
+          <div class="hotel-info">
+            <h2>Amara Resort & SPA</h2>
+            <div class="container clearfix">
+              <div class="info-left">
+                <div class="hotel-type">Гостиница</div>
+                <button class="btn btn-more">Подробнее</button>
+              </div>
+              <div class="info-right">
+                <div class="hotel-cost">от 3500 р.</div>
+                <button class="btn btn-book">Забронировать</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="hotel-status">
-          <div class="stars">★★★★</div>
-          <div class="rating">Рейтинг: 8,5</div>
+        <div class="search-column-last">
+          <div class="hotel-status">
+            <div class="stars">★★★★</div>
+            <div class="rating">Рейтинг: 8,5</div>
+          </div>
         </div>
       </section>
 
       <section class="hotel-item clearfix">
-        <div class="hotel-image"><img src="img/hotel-photo-2.jpg" alt="" width="135" height="90"></div>
-        <div class="hotel-info">
-          <h2>Desert Quail Inn</h2>
-          <div class="container clearfix">
-            <div class="info-left">
-              <div class="hotel-type">Мотель</div>
-              <button class="btn btn-more">Подробнее</button>
-            </div>
-            <div class="info-right">
-              <div class="hotel-cost">от 2000 р.</div>
-              <button class="btn btn-book">Забронировать</button>
+        <div class="search-column-first">
+          <div class="hotel-image">
+            <img src="img/hotel-photo-2.jpg" alt="" width="135" height="90">
+          </div>
+        </div>
+        <div class="search-column-middle">
+          <div class="hotel-info">
+            <h2>Desert Quail Inn</h2>
+            <div class="container clearfix">
+              <div class="info-left">
+                <div class="hotel-type">Мотель</div>
+                <button class="btn btn-more">Подробнее</button>
+              </div>
+              <div class="info-right">
+                <div class="hotel-cost">от 2000 р.</div>
+                <button class="btn btn-book">Забронировать</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="hotel-status">
-          <div class="stars">★★</div>
-          <div class="rating">Рейтинг: 8,9</div>
+        <div class="search-column-last">
+          <div class="hotel-status">
+            <div class="stars">★★</div>
+            <div class="rating">Рейтинг: 8,9</div>
+          </div>
         </div>
       </section>
 
       <section class="hotel-item clearfix">
-        <div class="hotel-image"><img src="img/hotel-photo-3.jpg" alt="" width="135" height="90"></div>
-        <div class="hotel-info">
-          <h2>Villas at Poco Diablo</h2>
-          <div class="container clearfix">
-            <div class="info-left">
-              <div class="hotel-type">Апартаменты</div>
-              <button class="btn btn-more">Подробнее</button>
-            </div>
-            <div class="info-right">
-              <div class="hotel-cost">от 4000 р.</div>
-              <button class="btn btn-book">Забронировать</button>
+        <div class="search-column-first">
+          <div class="hotel-image">
+            <img src="img/hotel-photo-3.jpg" alt="" width="135" height="90">
+          </div>
+        </div>
+        <div class="search-column-middle">
+          <div class="hotel-info">
+            <h2>Villas at Poco Diablo</h2>
+            <div class="container clearfix">
+              <div class="info-left">
+                <div class="hotel-type">Апартаменты</div>
+                <button class="btn btn-more">Подробнее</button>
+              </div>
+              <div class="info-right">
+                <div class="hotel-cost">от 4000 р.</div>
+                <button class="btn btn-book">Забронировать</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="hotel-status">
-          <div class="stars">★★★</div>
-          <div class="rating">Рейтинг: 9,2</div>
+        <div class="search-column-last">
+          <div class="hotel-status">
+            <div class="stars">★★★</div>
+            <div class="rating">Рейтинг: 9,2</div>
+          </div>
         </div>
       </section>
     </div>

@@ -3,7 +3,7 @@ body {
   line-height: 24px;
   color: #333;
   font-weight: 400;
-  font-family: "PTSans", Arial, sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   text-transform: uppercase;
 }
 

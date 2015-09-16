@@ -1,10 +1,16 @@
+html {
+  min-width: 768px;
+}
+
 body {
   font-size: 15px;
   line-height: 24px;
   color: #333;
   font-weight: 400;
-  font-family: "PTSans", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
+
+  background-color: #f2f2f2;
 }
 
 .intro-text-title {
@@ -16,4 +22,925 @@ body {
   color: black;
   font-size: 30px;
   line-height: 30px;
+}
+
+.wrapper {
+  min-width: 768px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*                       Верхняя навигация с логотипом                       */
+.navigation-top ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+
+  font-size: 0;
+  line-height: 0;
+
+  text-align: center;
+}
+
+.navigation-top li {
+  display: inline-block;
+  vertical-align: top;
+
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+
+  box-sizing: border-box;
+  width: 20%;
+}
+
+.navigation-top li:nth-child(1),
+.navigation-top li:nth-child(2) {
+  text-align: left;
+}
+
+.navigation-top li:nth-last-child(1),
+.navigation-top li:nth-last-child(2) {
+  text-align: right;
+}
+
+.navigation-top a {
+  display: inline-block;
+  vertical-align: baseline;
+
+  padding: 14px 0 16px 0;
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation-top a:visited {
+  color: #000;
+}
+
+.navigation-top a:hover {
+  color: #81b3d2;
+}
+
+.navigation-top a:active {
+  color: #000;
+  opacity: 0.3;
+}
+
+.active a,
+.active a:visited {
+  color: #766357;
+}
+
+.active a:hover {
+  color: #604e43;
+}
+
+.active a:active {
+  color: #766357;
+  opacity: 0.3;
+}
+
+.navigation-top .logo-top {
+  box-sizing: border-box;
+  width: 8%;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-top figure {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+}
+
+.logo-top img {
+  display: block;
+  transform: translate(-50%);
+}
+
+
+/*                    Фотография (интро) + надписи на ней                    */
+.intro {
+  position: relative;
+  z-index: 1;
+  background: #deedf6 url("../img/intro-photo.jpg") no-repeat center -56px;
+  min-height: 508px;
+  text-align: center;
+}
+
+.intro .slogan-top {
+  display: block;
+  margin: 0 auto;
+  padding-top: 76px;
+}
+
+.intro .slogan-middle {
+  display: block;
+  margin: 0 auto;
+  padding-top: 52px;
+}
+
+.intro .slogan-bottom {
+  display: block;
+  margin: 0 auto;
+  padding-top: 56px;
+}
+
+.intro .line {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/*                              Текстовый блок                               */
+.intro-text {
+  background-color: #fff;
+  padding-top: 60px;
+  padding-bottom: 51px;
+}
+
+.intro-text-title {
+  margin: 0;
+  font-size: 21px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+.intro-text-features {
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #333;
+
+  padding-top: 30px;
+  text-align: center;
+}
+
+/*                         Блок feature с картинкой                          */
+.feature-text {
+  float: left;
+  width: 33.37%;
+
+  background-color: #81b3d2;
+  color: #fff;
+
+  box-sizing: border-box;
+  min-height: 256px;
+
+  padding-top: 53px;
+  padding-bottom: 53px;
+  text-align: center;
+}
+
+.feature-title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 25px;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 22px;
+
+}
+
+.feature-number {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+
+  margin-bottom: 26px;
+}
+
+.feature-about {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.feature-image {
+  float: left;
+  width: 66.63%;
+  height: 256px;
+}
+
+.feature-image-1 {
+  background: #a8b5a3 url("../img/feature-image-1.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+/* Так и не получилось пока с тэгом img
+.feature-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 256px;
+}
+
+.feature-image img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  / Правильно ли я указал эти параметры? /
+  max-width: 800px;
+  max-height: 256px;
+}
+*/
+
+.feature-image-2 {
+  background: #a8b5a3 url("../img/feature-image-2.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+/*                              Блок с иконками                              */
+.icons {
+  background-color: #fff;
+}
+
+.icon-item {
+  padding-top: 159px;
+  padding-bottom: 82px;
+  float: left;
+  width: 33.33%;
+  position: relative;
+  text-align: center;
+}
+
+.icon-house {
+  background: url("../img/icon-house.png") no-repeat 50% 60px;
+}
+
+.icon-burger {
+  background: url("../img/icon-burger.png") no-repeat 50% 61px;
+}
+
+.icon-gift {
+  background: url("../img/icon-gift.png") no-repeat 50% 56px;
+}
+
+.icon-title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+
+  margin: 0;
+  padding-bottom: 21px;
+}
+
+.icon-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+/*                    Переопределения для линии с фичами                     */
+.features-line .feature-text {
+  background-color: #eee;
+  color: #000;
+  float: left;
+  width: 33.33%;
+  padding-top: 45px;
+}
+
+/*                  Блок Заинтересовались + форма поиска гостиницы                  */
+.search-hotels {
+  position: relative;
+
+  background-color: #fff;
+  padding-top: 50px;
+}
+
+.search-title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 27px;
+
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+
+.search-about {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #333;
+
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.search-show {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 568px;
+  min-height: 86px;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 86px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #766357;
+}
+
+.search-show:hover {
+  background-color: #604e43;
+}
+
+.search-show:active {
+  color: #857871;
+  background-color: #503e33;
+}
+
+/* Стилизация формы*/
+.search-block {
+  position: absolute;
+  z-index: 2;
+  right: 50%;
+  left: 50%;
+}
+
+.form-search {
+  transform: translateX(-50%);
+
+  background-color: #fff;
+  padding: 55px;
+
+
+  box-sizing: border-box;
+  width: 568px;
+
+  font-size: 14px;
+  line-height: 38px;
+  font-weight: 700;
+
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.form-line {
+  margin-bottom: 29px;
+}
+
+/* Отступ для кнопки */
+.form-line:last-of-type {
+  margin-bottom: 55px;
+}
+
+/* При фокусе пропадает текст плейсхолдера*/
+.form-search input[type="text"]:focus::-moz-placeholder          { color: transparent; }
+.form-search input[type="text"]:focus:-moz-placeholder           { color: transparent; }
+.form-search input[type="text"]:focus:-ms-input-placeholder      { color: transparent; }
+.form-search input[type="text"]:focus::-webkit-input-placeholder { color: transparent; }
+
+.form-search input[type="text"]::-moz-placeholder          { color: #000; }
+.form-search input[type="text"]:-moz-placeholder           { color: #000; }
+.form-search input[type="text"]:-ms-input-placeholder      { color: #000; }
+.form-search input[type="text"]::-webkit-input-placeholder { color: #000; }
+
+
+.form-left {
+  float: left;
+  width: 112px;
+}
+
+.form-right {
+  float: right;
+  width: 346px;
+}
+
+.form-right input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  height: 38px;
+
+  outline: none;
+  border: none;
+  background-color: #f2f2f2;
+  padding-left: 15px;
+  padding-right: 40px;
+  color: #000;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form-right input[type="text"]:hover {
+  background-color: #ebebeb;
+}
+
+.form-right input[type="text"]:focus {
+  background-color: white;
+  border: 2px solid #e5e5e5;
+}
+
+.form-right-first {
+  float: left;
+  width: 167px;
+}
+
+.form-right-last {
+  float: right;
+  width: 179px;
+}
+
+.form-right-first input[type="text"],
+.form-right-last input[type="text"] {
+  width: 20%;
+  padding-left: 5px;
+  padding-right: 3px;
+}
+
+/* Отступ справа от надписи Дети*/
+.form-right-last input[type="text"] {
+  margin-left: 27px;
+}
+
+.search-button {
+  box-sizing: border-box;
+  width: 458px;
+  min-height: 58px;
+  outline: none;
+  border: none;
+  background-color: #81b3d2;
+  color: #fff;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.search-button:hover {
+  background-color: #669ec0;
+  cursor: pointer;
+}
+
+.search-button:active {
+  background-color: #5496bd;
+  color: #88b6d1;
+}
+
+/*                               Карта и футер                               */
+.map {
+  position: relative;
+  z-index: 1;
+  background: #cbdda9 url("../img/map.png") no-repeat;
+  min-height: 593px;
+}
+
+.footer-main {
+  width: 100%;
+  min-height: 120px;
+  opacity: 0.9;
+  background-color: #f9fbf6;
+}
+
+.footer-attached {
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-column {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+.footer-hash {
+  margin: 0;
+  padding: 0;
+  padding-top: 46px;
+
+  font-size: 21px;
+  line-height: 25px;
+  font-weight: 700;
+
+  color: #000;
+}
+
+.social-block {
+  padding-top: 36px;
+  font-size: 0;
+
+  /* Для соответствия макету*/
+  margin-left: 5px;
+}
+
+.social-btn {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 6px;
+  background-color: #81b3d2;
+  width: 46px;
+  height: 48px;
+}
+
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
+.copyright-link {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 41px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+
+.copyright-link img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+
+/*                           Страница hotels.html                            */
+.form-filter {
+  /* Тот же вопрос - как сместить изображение или уменьшении страницы?*/
+  background: #4a7798 url("../img/background-blur.jpg") no-repeat 0px -54px;
+  box-sizing: border-box;
+  min-height: 217px;
+
+  padding-top: 27px;
+  padding-left: 71px;
+  padding-right: 46px;
+}
+
+.checkbox-block {
+  float: left;
+  width: 23.6%;
+}
+
+.checkbox-block-2 {
+  float: left;
+  width: 40%;
+}
+
+.show-block {
+  float: right;
+  width: 32.7%;
+}
+
+.fieldset-title {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #fff;
+}
+
+.checkbox-block .fieldset-title,
+.checkbox-block-2 .fieldset-title {
+  margin-bottom: 23px;
+}
+
+.show-block .fieldset-title {
+  margin-bottom: 11px;
+}
+
+.form-filter label {
+  display: inline-block;
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.form-filter .fieldset-line {
+  margin-bottom: 22px;
+}
+
+.form-filter  input[type="checkbox"] {
+  display: none;
+}
+
+.filter-submit {
+  display: block;
+  margin-left: 44px;
+  margin-top: 20px;
+  box-sizing: border-box;
+
+  width: 137px;
+  height: 36px;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: none;
+  border: 2px solid #fff;
+  border-radius: 2px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+/*                               Линия Найдено                               */
+.search-results {
+  background-color: #fff;
+}
+
+.search-settings {
+  padding-top: 31px;
+  padding-bottom: 30px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.search-column-first {
+  float: left;
+  min-width: 12.19%;
+  margin-right: 19px;
+  padding-left: 72px;
+}
+
+.search-column-middle {
+  float: left;
+}
+
+.search-column-last {
+  float: right;
+  padding-right: 73px;
+}
+
+.search-count {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.search-sort ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #000;
+}
+
+.search-sort li {
+  display: inline-block;
+  margin-right: 33px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.search-sort-title {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+
+ /* Переопределяю как по макету */
+  margin-right: 40px;
+}
+
+.search-sort a {
+  display: block;
+  color: #000;
+  opacity: 0.5;
+  text-decoration: none;
+  border-bottom: #81b3d2 1px dotted;
+}
+
+.search-sort a:hover {
+  color: #81b3d2;
+  opacity: 1;
+}
+
+.search-sort a:active {
+  color: #000;
+  opacity: 1;
+  border-bottom: none;
+}
+
+.sort-active {
+  color: #81b3d2;
+}
+
+.search-order {
+  font-size: 0;
+  position: relative;
+
+  margin-right: 36px;
+}
+
+/* пока сделал через CSS, а не иконочный шрифт*/
+/* возможно переделаю на иконочный шрифт*/
+.order-up {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #ccc;
+}
+
+.order-down {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #ccc;
+}
+
+.order-up:first-child {
+  top: 8px;
+  left: 3px;
+}
+
+.order-down:first-child {
+  top: 8px;
+  left: 3px;
+}
+
+.order-up:last-child {
+  top: 8px;
+  left: 25px;
+}
+
+.order-down:last-child {
+  top: 8px;
+  left: 25px;
+}
+
+.order-active {
+  border-bottom-color: #81b3d2;
+  border-top-color: #81b3d2;
+}
+
+.search-order a:hover {
+  border-bottom-color: #000;
+  border-top-color: #000;
+}
+
+.search-order a:active {
+  border-bottom-color: #81b3d2;
+  border-top-color: #81b3d2;
+}
+
+/*                      Строка с параметрами гостиницы                       */
+.hotel-item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hotel-info {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.hotel-info h2{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 7px;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.hotel-info a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+.hotel-info a:hover {
+  color: #81b3d2;
+}
+
+.hotel-info a:active {
+  color: #000;
+  opacity: 0.3;
+}
+
+.hotel-image img {
+  padding-top: 4px;
+}
+
+.info-left {
+  float: left;
+}
+
+.info-right {
+  float: right;
+}
+
+.hotel-type,
+.hotel-cost {
+  margin-bottom: 14px;
+}
+
+/* Почему-то шрифт жирнее смотрится, чем на макете...*/
+.btn {
+  margin: 0;
+  margin-right: 6px;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  min-height: 27px;
+
+  color: #fff;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.btn-more {
+  background-color: #81b3d2;
+  width: 110px;
+}
+
+.btn-more:hover {
+  background-color: #669ec0;
+}
+
+.btn-more:active {
+  background-color: #669ec0;
+  color: #88b6d1;
+}
+
+.btn-book {
+  background-color: #766357;
+  width: 142px;
+}
+
+.btn-book:hover {
+  background-color: #604e43;
+}
+
+.btn-book:active {
+  background-color: #503e33;
+  color: #857871;
+}
+
+.hotel-status {
+  text-align: right;
+}
+
+.hotel-status .stars {
+  margin-bottom: 44px;
+}
+
+.hotel-status .rating {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 110px;
+  height: 27px;
+  background-color: #f2f2f2;
+
+  padding-left: 16px;
+  padding-right: 10px;
+
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27px;
 }

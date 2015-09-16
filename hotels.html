@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Выбор отеля — Седона</title>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -11,11 +12,16 @@
     <header class="main-header">
       <nav class="navigation-top">
         <ul>
-          <li>
+          <li class="active">
             <a href="#">Информация</a>
           </li>
           <li>
             <a href="#">Фото и видео</a>
+          </li>
+          <li class="logo-top">
+            <figure>
+              <img src="img/logo-top.png" width="138" height="70" alt="Седона">
+            </figure>
           </li>
           <li>
             <a href="#">Карта штата</a>
@@ -24,7 +30,6 @@
             <a href="#">Гостиницы</a>
           </li>
         </ul>
-        <div class="logo-top"><a href="#"><img src="img/logo-top.png" width="138" height="70" alt="Седона"></a></div>
       </nav>
     </header>
 
@@ -32,16 +37,34 @@
       <form class="clearfix" action="#" method="get">
         <section class="checkbox-block">
           <h2 class="fieldset-title">Инфраструктура:</h2>
-          <label><input type="checkbox" checked>Бассейн</label>
-          <label><input type="checkbox">Парковка</label>
-          <label><input type="checkbox">Wi-Fi</label>
+          <div class="fieldset-line">
+          <input id="checkbox-1-1" type="checkbox" checked>
+          <label for="checkbox-1-1">Бассейн</label>
+          </div>
+          <div class="fieldset-line">
+          <input id="checkbox-1-2" type="checkbox" name="">
+          <label for="checkbox-1-2">Парковка</label>
+          </div>
+          <div class="fieldset-line">
+          <input id="checkbox-1-3" type="checkbox">
+          <label for="checkbox-1-3">Wi-Fi</label>
+          </div>
         </section>
 
-        <section class="checkbox-block">
+        <section class="checkbox-block-2">
           <h2 class="fieldset-title">Тип жилья:</h2>
-          <label><input type="checkbox" checked>Гостиница</label>
-          <label><input type="checkbox" checked>Мотель</label>
-          <label><input type="checkbox" checked>Апартаменты</label>
+          <div class="fieldset-line">
+          <input id="checkbox-2-1" type="checkbox" checked>
+          <label for="checkbox-2-1">Гостиница</label>
+          </div>
+          <div class="fieldset-line">
+          <input id="checkbox-2-2" type="checkbox" checked>
+          <label for="checkbox-2-2">Мотель</label>
+          </div>
+          <div class="fieldset-line">
+          <input id="checkbox-2-3" type="checkbox" checked>
+          <label for="checkbox-2-3">Апартаменты</label>
+          </div>
         </section>
 
         <section class="show-block">
@@ -57,16 +80,17 @@
       <div class="search-settings clearfix">
         <div class="search-column-first search-count">Найдено: 3</div>
         <div class="search-column-middle search-sort">
-          <div class="search-sort-title">Сортировка:</div>
           <ul>
-            <li><a href="#">по цене</a></li>
+            <li class="search-sort-title">Сортировка:</li>
+            <li class="sort-active">по цене</li>
             <li><a href="#">по типу</a></li>
             <li><a href="#">по рейтингу</a></li>
           </ul>
         </div>
         <div class="search-column-last search-order">
+        fdf
           <a class="order-up" href="#">вверх</a>
-          <a class="order-down" href="#">вниз</a>
+          <span class="order-down order-active">вниз</span>
         </div>
       </div>
 
@@ -75,7 +99,7 @@
           <img src="img/hotel-photo-1.jpg" alt="" width="135" height="90">
         </div>
         <div class="search-column-middle hotel-info">
-          <h2>Amara Resort & SPA</h2>
+          <h2><a href="#">Amara Resort & SPA</a></h2>
           <div class="container clearfix">
             <div class="info-left">
               <div class="hotel-type">Гостиница</div>
@@ -98,7 +122,7 @@
           <img src="img/hotel-photo-2.jpg" alt="" width="135" height="90">
         </div>
         <div class="search-column-middle hotel-info">
-          <h2>Desert Quail Inn</h2>
+          <h2><a href="#">Desert Quail Inn</a></h2>
           <div class="container clearfix">
             <div class="info-left">
               <div class="hotel-type">Мотель</div>
@@ -121,7 +145,7 @@
           <img src="img/hotel-photo-3.jpg" alt="" width="135" height="90">
         </div>
         <div class="search-column-middle hotel-info">
-          <h2>Villas at Poco Diablo</h2>
+          <h2><a href="#">Villas at Poco Diablo</a></h2>
           <div class="container clearfix">
             <div class="info-left">
               <div class="hotel-type">Апартаменты</div>
@@ -140,17 +164,21 @@
       </section>
     </div>
 
-    <footer class="footer-attached clearfix">
+    <footer class="footer-main clearfix">
       <div class="footer-column">
         <h2 class="footer-hash">#visitsedona</h2>
       </div>
       <div class="footer-column">
-        <a class="social-twitter" href="#"></a>
-        <a class="social-facebook" href="#"></a>
-        <a class="social-youtube" href="#"></a>
+        <div class="social-block">
+          <a class="social-btn social-twitter" href="#">Twitter</a>
+          <a class="social-btn social-facebook" href="#">Facebook</a>
+          <a class="social-btn social-youtube" href="#">Youtube</a>
+        </div>
       </div>
       <div class="footer-column">
-        <a href="http://htmlacademy.ru"><img src="img/logo-htmlacademy.png" height="39" width="113" alt=""></a>
+        <a class="copyright-link" href="http://htmlacademy.ru">
+          website by <img src="img/logo-htmlacademy.png" height="39" width="113" alt="">
+        </a>
       </div>
     </footer>
 

@@ -1,0 +1,2 @@
+http://spritegen.website-performance.org
+Подключив файл настроек settings.txt на этом сайте можно редактировать созданный спрайт.

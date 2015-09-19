@@ -1,3 +1,15 @@
+/*                              Иконочный шрифт                              */
+@font-face {
+  font-family: 'symbols-sedona';
+  src: url('../font/symbols-sedona.eot?60737633');
+  src: url('../font/symbols-sedona.eot?60737633#iefix') format('embedded-opentype'),
+       url('../font/symbols-sedona.woff?60737633') format('woff'),
+       url('../font/symbols-sedona.ttf?60737633') format('truetype'),
+       url('../font/symbols-sedona.svg?60737633#symbols-sedona') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-size: 15px;
   line-height: 24px;
@@ -37,37 +49,50 @@ body {
 
 /*                       Верхняя навигация с логотипом                       */
 .navigation-top ul {
+  position: relative;
+
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #fff;
 
   font-size: 0;
   line-height: 0;
 
   text-align: center;
+  box-sizing: border-box;
+  padding: 0 6%;
+  background-color: #fff;
 }
 
 .navigation-top li {
   display: inline-block;
   vertical-align: top;
+  box-sizing: border-box;
+  width: 20%;
 
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-
-  box-sizing: border-box;
-  width: 20%;
 }
 
-.navigation-top li:nth-child(1),
-.navigation-top li:nth-child(2) {
+.navigation-top li:nth-of-type(1) {
   text-align: left;
+  margin-right: 2.75%;
 }
 
-.navigation-top li:nth-last-child(1),
-.navigation-top li:nth-last-child(2) {
+.navigation-top li:nth-of-type(2) {
+  text-align: left;
+  margin-right: 7.3%;
+}
+
+.navigation-top li:nth-of-type(3) {
   text-align: right;
+  margin-left: 7.2%;
+}
+
+.navigation-top li:nth-of-type(4) {
+  text-align: right;
+  margin-left: 2.75%;
 }
 
 .navigation-top a {
@@ -106,30 +131,26 @@ body {
   opacity: 0.3;
 }
 
-.navigation-top .logo-top {
-  box-sizing: border-box;
-  width: 8%;
-  position: relative;
+.navigation-top .header-logo {
+  width: 138px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -69px;
+  text-align: center;
+  padding: 0;
   z-index: 2;
 }
 
-.logo-top figure {
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  right: 50%;
-}
-
-.logo-top img,
-.logo-top a {
+.header-logo img {
+  position: relative;
   display: block;
-  transform: translate(-50%);
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  z-index: 2;
 }
-
-.logo-top a {
-  padding: 0;
-}
-
 
 /*                    Фотография (интро) + надписи на ней                    */
 .intro {
@@ -158,11 +179,16 @@ body {
   padding-top: 56px;
 }
 
-.intro .line {
+.intro::after {
+  content: '';
   display: block;
   width: 100%;
+  max-width: 100%;
+  height: 57px;
   position: absolute;
   bottom: 0;
+  background: url("../img/intro-line.png") no-repeat center bottom;
+  background-size: 100%;
 }
 
 /*                              Текстовый блок                               */
@@ -197,7 +223,7 @@ body {
 /*                         Блок feature с картинкой                          */
 .feature-text {
   float: left;
-  width: 33.37%;
+  width: 33.33%;
 
   background-color: #81b3d2;
   color: #fff;
@@ -205,11 +231,8 @@ body {
   box-sizing: border-box;
   min-height: 256px;
 
-  padding-top: 53px;
-  padding-bottom: 53px;
+  padding: 53px 6% 20px;
 
-  padding-left: 5.91666666%;
-  padding-right: 5.91666666%;
   text-align: center;
 }
 
@@ -239,21 +262,11 @@ body {
 }
 
 .feature-image {
-  float: left;
-  width: 66.63%;
-  height: 256px;
-}
-
-.feature-image-1 {
-  background: #a8b5a3 url("../img/feature-image-1.jpg") no-repeat center center;
-  background-size: cover;
-}
-
-/* Так и не получилось пока с тэгом img
-.feature-image {
   position: relative;
   overflow: hidden;
   min-height: 256px;
+  width: 66.67%;
+  float: left;
 }
 
 .feature-image img {
@@ -264,15 +277,9 @@ body {
   left: 0;
   margin: auto;
 
-  / Правильно ли я указал эти параметры? /
-  max-width: 800px;
-  max-height: 256px;
-}
-*/
-
-.feature-image-2 {
-  background: #a8b5a3 url("../img/feature-image-2.jpg") no-repeat center center;
-  background-size: cover;
+  /* Правильно ли я указал эти параметры? */
+  max-width: 100%;
+  height: 256px;
 }
 
 /*                              Блок с иконками                              */
@@ -292,16 +299,46 @@ body {
   text-align: center;
 }
 
-.icon-house {
-  background: url("../img/icon-house.png") no-repeat 50% 60px;
+.icon-house::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 40.5%;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 75px;
+  height: 72px;
+
+  background: url("../img/spritesheet.png") no-repeat;
+  background-position: -10px -196px;
 }
 
-.icon-burger {
-  background: url("../img/icon-burger.png") no-repeat 50% 61px;
+.icon-burger::before {
+  content: '';
+  position: absolute;
+  top: 61px;
+  left: 41%;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 74px;
+  height: 70px;
+
+  background: url("../img/spritesheet.png") no-repeat;
+  background-position: -10px -10px;
 }
 
-.icon-gift {
-  background: url("../img/icon-gift.png") no-repeat 50% 56px;
+.icon-gift::before {
+  content: '';
+  position: absolute;
+  top: 56px;
+  left: 42%;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 64px;
+  height: 76px;
+
+  background: url("../img/spritesheet.png") no-repeat;
+  background-position: -10px -100px;
 }
 
 .icon-title {
@@ -454,7 +491,7 @@ body {
   border: none;
   background-color: #f2f2f2;
   padding-left: 15px;
-  padding-right: 40px;
+  padding-right: 50px;
   color: #000;
 
   font-family: "PT Sans", Arial, sans-serif;
@@ -470,29 +507,122 @@ body {
 
 .form-right input[type="text"]:focus {
   background-color: white;
+  outline: 2px solid #e5e5e5;
+}
+
+.calendar-input {
+  position: relative;
+}
+
+.calendar-button {
+  position: absolute;
+  display: block;
+  width: 39px;
+  height: 34px;
+  right: 2px;
+  top: 2px;
+  background-color: #f2f2f2;
+  outline: none;
+  border: none;
+}
+
+.calendar-button::before {
+  content: '\e800';
+  font-family: "symbols-sedona";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  vertical-align: baseline;
+  text-align: center;
+  text-transform: none;
+  color: #c2c2c2;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.calendar-button:hover::before {
+  color: #000;
+}
+
+.calendar-button:active::before {
+  color: #81b3d2;
+}
+
+.calendar-input input[type="text"]:hover + .calendar-button {
+  background-color: #ebebeb;
+}
+
+.calendar-input input[type="text"]:focus + .calendar-button {
+  background-color: #fff;
+}
+
+.icon-plus::before,
+.icon-minus::before {
+  font-family: "symbols-sedona";
+  font-style: normal;
+  font-weight: normal;
+
+  display: inline-block;
+  vertical-align: baseline;
+  text-align: center;
+  text-transform: none;
+}
+
+.icon-plus::before { content: '\e801'; }
+.icon-minus::before { content: '\e802'; }
+
+.form-button-symbol {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  width: 38px;
+  height: 38px;
+  color: darkgrey;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.form-button-symbol:hover {
+  background-color: #ebebeb;
+  color: #000;
+}
+
+.form-button-symbol:active {
+  background-color: white;
   border: 2px solid #e5e5e5;
+  color: #81b3d2;
 }
 
 .form-right-first {
   float: left;
   width: 167px;
+
+  font-size: 0;
 }
 
 .form-right-last {
   float: right;
   width: 179px;
+
+  font-size: 0;
+}
+
+.form-right-last span {
+  /* Восстанавливаем шрифт*/
+  font-size: 14px;
+  /* Отступ справа от надписи Дети*/
+  margin-right: 27px;
 }
 
 .form-right-first input[type="text"],
 .form-right-last input[type="text"] {
   width: 20%;
-  padding-left: 5px;
+  padding-left: 3px;
   padding-right: 3px;
-}
-
-/* Отступ справа от надписи Дети*/
-.form-right-last input[type="text"] {
-  margin-left: 27px;
+  text-align: center;
 }
 
 .search-button {
@@ -562,12 +692,10 @@ body {
 
 .social-block {
   font-size: 0;
-
-  /* Для соответствия макету*/
-  margin-left: 5px;
 }
 
 .social-btn {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   margin-right: 6px;
@@ -578,6 +706,53 @@ body {
 
 .social-btn:hover {
   background-color: #669ec0;
+}
+
+.social-btn:active {
+  background-color: #5496bd;
+}
+
+.social-btn::after {
+  font-family: 'symbols-sedona';
+  display: inline-block;
+  vertical-align: baseline;
+  text-transform: none;
+  content: '';
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 26px;
+  color: #fff;
+}
+
+.social-twitter::after {
+  content: '\74';
+  transform: translate(-50%, -50%);
+}
+
+.social-twitter:active::after {
+  opacity: 0.3;
+}
+
+.social-facebook::after {
+  content: '\66';
+  transform: translate(-50%, -50%);
+}
+
+.social-facebook:active::after {
+  opacity: 0.3;
+}
+
+.social-youtube::after {
+  content: '\f39e';
+  transform: translate(-50%, -50%);
+}
+
+.social-youtube:active::after {
+  opacity: 0.3;
 }
 
 .copyright-link {
@@ -592,10 +767,24 @@ body {
   color: #000;
 }
 
-.copyright-link img {
+.copyright-logo {
   display: inline-block;
   vertical-align: middle;
   margin-left: 4px;
+  font-size: 0;
+
+  width: 113px;
+  height: 39px;
+  background: url("../img/spritesheet.png") no-repeat;
+  background-position: -10px -288px;
+}
+
+.copyright-link:hover .copyright-logo {
+  background-position: -10px -406px;
+}
+
+.copyright-link:active .copyright-logo {
+  background-position: -10px -347px;
 }
 
 
@@ -614,11 +803,13 @@ body {
 .checkbox-block {
   float: left;
   width: 23.6%;
+  /*width: 33.33333333%;*/
 }
 
 .checkbox-block-2 {
   float: left;
   width: 40%;
+  /*width: 33.33333333%;*/
 }
 
 .show-block {
@@ -638,15 +829,22 @@ body {
 
 .checkbox-block .fieldset-title,
 .checkbox-block-2 .fieldset-title {
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 }
 
 .show-block .fieldset-title {
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 }
 
-.form-filter label {
+.form-filter input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-block label,
+.checkbox-block-2 label {
+  position: relative;
   display: inline-block;
+  vertical-align: top;
   color: #fff;
 
   font-size: 14px;
@@ -657,18 +855,179 @@ body {
   cursor: pointer;
 }
 
+.checkbox-block label::before,
+.checkbox-block-2 label::before {
+  content: "\2610";
+  font-family: "symbols-sedona";
+  color: #b5b5b5;
+  font-size: 26px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: baseline;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 26px;
+  height: 22px;
+}
+
+.checkbox-block input[type="checkbox"]:checked + label::before,
+.checkbox-block-2 input[type="checkbox"]:checked + label::before {
+  content: "\2611";
+}
+
+.checkbox-block label:hover::before,
+.checkbox-block-2 label:hover::before {
+  color: #fefefe;
+}
+
+.checkbox-block input[type="checkbox"]:disabled + label::before,
+.checkbox-block-2 input[type="checkbox"]:disabled + label::before {
+  color: #6a6a6a;
+}
+
 .form-filter .fieldset-line {
   margin-bottom: 22px;
 }
 
-.form-filter  input[type="checkbox"] {
-  display: none;
+
+/* Ползунок с ценами */
+
+.range-filter {
+  width: 89.80%;
 }
 
-.filter-submit {
+.show-block .range-filter {
+  margin-left: 11px;
+  margin-bottom: 32px;
+}
+
+.range-filter .price-controls {
+  margin-bottom: 20px;
+}
+
+.price-controls {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+
+  border: 2px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+
+  /* Почему на 50% не помещаются в строку? */
+  width: 49%;
+
+  text-align: center;
+  line-height: 32px;
+}
+
+.price-controls .min-price {
+  padding-left: 35px;
+}
+
+.price-controls .max-price {
+  padding-left: 15px;
+}
+
+.price-controls input[type="text"] {
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+/* При фокусе пропадает текст плейсхолдера*/
+.range-filter input[type="text"]:focus::-moz-placeholder          { color: transparent; }
+.range-filter input[type="text"]:focus:-moz-placeholder           { color: transparent; }
+.range-filter input[type="text"]:focus:-ms-input-placeholder      { color: transparent; }
+.range-filter input[type="text"]:focus::-webkit-input-placeholder { color: transparent; }
+
+.range-filter input[type="text"]::-moz-placeholder          { color: #fff; }
+.range-filter input[type="text"]:-moz-placeholder           { color: #fff; }
+.range-filter input[type="text"]:-ms-input-placeholder      { color: #fff; }
+.range-filter input[type="text"]::-webkit-input-placeholder { color: #fff; }
+
+
+/* Стилизация разделителя */
+.price-controls::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background-color: #fff;
+  top: 5px;
+  right: 50%;
+  left: 50%;
+}
+
+.range-filter .scale {
+  width: 100%;
+  height: 2px;
+  background-color: #918383;
+}
+
+.range-filter .bar {
+  width: 82%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.range-controls {
+  position: relative;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 0 rgba(0, 1, 1, 0.14);
+  top: -9px;
+}
+
+.range-controls .toggle::after {
+  content: '';
   display: block;
-  margin-left: 44px;
-  margin-top: 20px;
+  width: 4px;
+  height: 4px;
+  background-color: #ababab;
+  margin: 8px 8px;
+  border-radius: 50%;
+}
+
+.range-controls .toggle:hover {
+  cursor: pointer;
+}
+
+.toggle:hover::after {
+  background-color: #1c4f80;
+}
+
+.range-controls .toggl-max {
+  left: 80%;
+}
+
+
+.filter-submit {
+  display: inline-block;
+  vertical-align: baseline;
   box-sizing: border-box;
 
   width: 137px;
@@ -685,6 +1044,20 @@ body {
   font-weight: 400;
   line-height: 21px;
   text-transform: uppercase;
+}
+
+/* моя инициатива */
+.filter-submit:hover {
+  border-color: #b5b5b5;
+  color: #b5b5b5;
+}
+.filter-submit:active {
+  border-color: #766357;
+  color: #766357;
+}
+
+.show-block .filter-submit {
+  margin-left: 27%;
 }
 
 /*                               Линия Найдено                               */
@@ -726,11 +1099,17 @@ body {
   padding: 0;
   list-style: none;
   color: #000;
+
 }
 
 .search-sort li {
   display: inline-block;
+  vertical-align: top;
   margin-right: 33px;
+
+  /* Опустил li чуть вниз. Почему я также не могу ul опустить
+  - у ul почему-то высота больше, чем я ожидаю, чем это вызвано?*/
+  padding-top: 7px;
 
   font-size: 12px;
   font-weight: 400;
@@ -781,6 +1160,7 @@ body {
 .order-up {
   position: absolute;
   display: inline-block;
+  vertical-align: baseline;
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -791,6 +1171,7 @@ body {
 .order-down {
   position: absolute;
   display: inline-block;
+  vertical-align: baseline;
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -944,9 +1325,28 @@ body {
   margin-bottom: 44px;
 }
 
+.i-star::after {
+  display: inline-block;
+  vertical-align: baseline;
+  content: "\2605";
+  font-family: "symbols-sedona";
+  font-style: normal;
+  font-weight: normal;
+
+  color: #81b3d2;
+  font-size: 19px;
+  line-height: 21px;
+
+  width: 1em;
+  text-align: center;
+
+  text-transform: none;
+}
+
 .hotel-status .rating {
   box-sizing: border-box;
   display: inline-block;
+  vertical-align: top;
   width: 110px;
   height: 27px;
   background-color: #f2f2f2;

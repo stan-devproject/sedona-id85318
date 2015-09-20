@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <title>Седона</title>
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <div class="wrapper">
@@ -25,22 +24,18 @@
             <a href="hotels.html">Гостиницы</a>
           </li>
         </ul>
-        
         <a class="header-logo" href="index.html"><img src="img/logo-top.png" width="138" height="70" alt="Седона"></a>
       </nav>
-
       <div class="intro">
         <div class="slogan-top"><img src="img/slogan-top.png" width="256" height="86" alt=""></div>
         <div class="slogan-middle"><img src="img/slogan-middle.png" width="458" height="78" alt=""></div>
         <div class="slogan-bottom"><img src="img/slogan-bottom.png" width="296" height="80" alt=""></div>
       </div>
     </header>
-
     <div class="intro-text">
       <h1 class="intro-text-title">Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
       <div class="intro-text-features">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</div>
     </div>
-
     <section class="feature-item clearfix">
       <div class="feature-text">
         <h2 class="feature-title">Настоящий городок</h2>
@@ -49,22 +44,23 @@
       </div>
       <div class="feature-image"><img src="img/feature-image-1.jpg" alt="" width="800" height="256"></div>
     </section>
-
     <div class="icons clearfix">
-      <div class="icon-item icon-house">
+      <div class="icon-item">
+        <div class="icon-image icon-house"></div>
         <h2 class="icon-title">Жилье</h2>
         <div class="icon-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</div>
       </div>
-      <div class="icon-item icon-burger">
+      <div class="icon-item">
+        <div class="icon-image icon-burger"></div>
         <h2 class="icon-title">Еда</h2>
         <div class="icon-text">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</div>
       </div>
-      <div class="icon-item icon-gift">
+      <div class="icon-item">
+        <div class="icon-image icon-gift"></div>
         <h2 class="icon-title">Сувениры</h2>
         <div class="icon-text">Не только китайского,<br>но и местного производства!</div>
       </div>
     </div>
-
     <section class="feature-item clearfix">
       <div class="feature-image"><img src="img/feature-image-2.jpg" alt="" width="800" height="256"></div>
       <div class="feature-text">
@@ -73,7 +69,6 @@
         <div class="feature-about">Да, по нему можно пройти!<br>Если конечно вы осмелитесь</div>
       </div>
     </section>
-
     <section class="features-line clearfix">
       <div class="feature-text">
         <h2 class="feature-title">Небольшая<br>площадь</h2>
@@ -91,14 +86,12 @@
         <div class="feature-about">Большинство едет в гранд каньон и толпится там</div>
       </div>
     </section>
-
     <section class="search-hotels">
         <div class="search-text">
           <h2 class="search-title">Заинтересовались?</h2>
           <div class="search-about">Укажите предполагаемые даты поездки<br>и мы покажем вам лучшие предложения гостиниц в Седоне</div>
         </div>
-        <a class="search-show" href="#">Поиск гостиницы в Седоне</a>
-
+        <a class="search-show" href="search.html">Поиск гостиницы в Седоне</a>
         <div class="search-block">
           <form class="form-search" action="#" method="post">
             <div class="form-line clearfix">
@@ -145,10 +138,8 @@
           </form>
         </div>
     </section>
-
     <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d705462.4803377569!2d-111.73208807180848!3d34.777923303447494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1442747958706" width="100%" height="677" frameborder="0" style="border:0" allowfullscreen></iframe>
-
+      <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d705462.4803377569!2d-111.73208807180848!3d34.777923303447494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1442747958706" width="1200" height="593" allowfullscreen></iframe>
       <footer class="footer-main footer-attached clearfix">
         <div class="footer-column">
           <h2 class="footer-hash">#visitsedona</h2>
@@ -165,9 +156,7 @@
         </div>
       </footer>
     </div>
-
   </div>
-
-  <script src="js/main.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="js/main.min.js" type="text/javascript" async defer></script>
 </body>
 </html>

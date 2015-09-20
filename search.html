@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Поиск отеля — Седона</title>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="inner-page">
+  <div class="wrapper">
+    <header class="main-header">
+      <nav class="navigation-top">
+        <ul>
+          <li>
+            <a href="#">Информация</a>
+          </li>
+          <li>
+            <a href="#">Фото и видео</a>
+          </li>
+          <li>
+            <a href="#">Карта штата</a>
+          </li>
+          <li class="active">
+            <a href="hotels.html">Гостиницы</a>
+          </li>
+        </ul>
+        <a class="header-logo" href="index.html"><img src="img/logo-top.png" width="138" height="70" alt="Седона"></a>
+      </nav>
+    </header>
+    <section class="search-hotels">
+      <h1 class="inner-search-title">Поиск гостиницы в Седоне</h1>
+      <div class="search-block">
+        <form class="form-search" action="search.html" method="post">
+          <div class="form-line clearfix">
+            <div class="form-left">
+              Дата заезда:
+            </div>
+            <div class="form-right">
+              <div class="calendar-input">
+                <input id="jsDateEntranse" type="text" name="date_entrance" placeholder="24 апреля 2014">
+              </div>
+            </div>
+          </div>
+          <div class="form-line clearfix">
+            <div class="form-left">
+              Дата выезда:
+            </div>
+            <div class="form-right">
+              <div class="calendar-input">
+                <input id="jsDateDeparture" type="text" name="date_departure" placeholder="4 июля 2014">
+              </div>
+            </div>
+          </div>
+          <div class="form-line clearfix">
+            <div class="form-left">
+              Взрослые:
+            </div>
+            <div class="form-right clearfix">
+              <div class="form-right-first">
+                <input id="jsCountAdult" type="text" name="adult_count" placeholder="2">
+              </div>
+              <div class="form-right-last">
+                <span>Дети:</span>
+                <input id="jsCountChildren" type="text" name="children_count" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <button class="search-button" type="submit">Найти</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer-main clearfix">
+      <div class="footer-column">
+        <h2 class="footer-hash">#visitsedona</h2>
+      </div>
+      <div class="footer-column social-block">
+        <a class="social-btn social-twitter" href="#">Twitter</a>
+        <a class="social-btn social-facebook" href="#">Facebook</a>
+        <a class="social-btn social-youtube" href="#">Youtube</a>
+      </div>
+      <div class="footer-column">
+        <a class="copyright-link" href="http://htmlacademy.ru">
+            website by <div class="copyright-logo">Htmlacademy.ru</div>
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

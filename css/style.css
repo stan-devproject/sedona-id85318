@@ -1074,9 +1074,11 @@ body {
 
 .search-column-first {
   float: left;
-  min-width: 12.19%;
-  margin-right: 19px;
-  padding-left: 72px;
+  width: 17.6%;
+  margin-right: 4%;
+  padding-left: 6%;
+  /*margin-right: 19px;*/
+  /*padding-left: 72px;*/
 }
 
 .search-column-middle {
@@ -1085,7 +1087,8 @@ body {
 
 .search-column-last {
   float: right;
-  padding-right: 73px;
+  padding-right: 6%;
+  /*padding-right: 73px;*/
 }
 
 .search-count {
@@ -1120,9 +1123,6 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-
- /* Переопределяю как по макету */
-  margin-right: 40px;
 }
 
 .search-sort a {

@@ -107,7 +107,7 @@
               </div>
               <div class="form-right">
                 <div class="calendar-input">
-                  <input type="text" name="date_entrance" placeholder="24 апреля 2014">
+                  <input id="jsDateEntranse" type="text" name="date_entrance" placeholder="24 апреля 2014">
                   <button class="calendar-button" type="button"></button>
                 </div>
               </div>
@@ -118,7 +118,7 @@
               </div>
               <div class="form-right">
                 <div class="calendar-input">
-                  <input type="text" name="date_departure" placeholder="4 июля 2014">
+                  <input id="jsDateDeparture" type="text" name="date_departure" placeholder="4 июля 2014">
                   <button class="calendar-button" type="button"></button>
                 </div>
               </div>
@@ -130,13 +130,13 @@
               <div class="form-right clearfix">
                 <div class="form-right-first">
                   <button class="form-button-symbol icon-minus" type="button"></button>
-                  <input type="text" name="adult_count" placeholder="2">
+                  <input id="jsCountAdult" type="text" name="adult_count" placeholder="2">
                   <button class="form-button-symbol icon-plus" type="button"></button>
                 </div>
                 <div class="form-right-last">
                   <span>Дети:</span>
                   <button class="form-button-symbol icon-minus" type="button"></button>
-                  <input type="text" name="children_count" placeholder="0">
+                  <input id="jsCountChildren" type="text" name="children_count" placeholder="0">
                   <button class="form-button-symbol icon-plus" type="button"></button>
                 </div>
               </div>
@@ -147,6 +147,8 @@
     </section>
 
     <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d705462.4803377569!2d-111.73208807180848!3d34.777923303447494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1442747958706" width="100%" height="677" frameborder="0" style="border:0" allowfullscreen></iframe>
+
       <footer class="footer-main footer-attached clearfix">
         <div class="footer-column">
           <h2 class="footer-hash">#visitsedona</h2>
@@ -165,5 +167,7 @@
     </div>
 
   </div>
+
+  <script src="js/main.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

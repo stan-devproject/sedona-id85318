@@ -10,7 +10,6 @@
   font-style: normal;
 }
 
-
 /*                               Базовые стили                               */
 body {
   font-size: 15px;
@@ -36,7 +35,6 @@ body {
   display: table;
   clear: both;
 }
-
 
 /*                       Верхняя навигация с логотипом                       */
 .navigation-top {
@@ -425,7 +423,6 @@ body {
   color: #000;
   text-align: center;
 }
-
 
 .search-about {
   font-size: 14px;
@@ -1039,7 +1036,6 @@ body {
 .range-filter input[type="text"]:-ms-input-placeholder      { color: #fff; }
 .range-filter input[type="text"]::-webkit-input-placeholder { color: #fff; }
 
-
 /* Стилизация разделителя */
 .price-controls::after {
   content: '';
@@ -1123,7 +1119,7 @@ body {
   margin: 0 auto;
 }
 
-/* моя инициатива */
+/* Моя инициатива */
 .filter-submit:hover {
   border-color: #b5b5b5;
   color: #b5b5b5;

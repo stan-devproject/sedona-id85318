@@ -48,9 +48,11 @@ body {
 
 
 /*                       Верхняя навигация с логотипом                       */
-.navigation-top ul {
+.navigation-top {
   position: relative;
+}
 
+.navigation-top ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -158,25 +160,42 @@ body {
   z-index: 1;
   background: #deedf6 url("../img/intro-photo.jpg") no-repeat center -56px;
   min-height: 508px;
-  text-align: center;
 }
 
-.intro .slogan-top {
-  display: block;
+.slogan-top {
+  width: 256px;
   margin: 0 auto;
+}
+
+.slogan-top img{
+  display: block;
   padding-top: 76px;
+  max-width: 100%;
+  height: auto;
 }
 
-.intro .slogan-middle {
-  display: block;
+.slogan-middle {
+  width: 458px;
   margin: 0 auto;
+}
+
+.slogan-middle img{
+  display: block;
   padding-top: 52px;
+  max-width: 100%;
+  height: auto;
 }
 
-.intro .slogan-bottom {
-  display: block;
+.slogan-bottom {
+  width: 296px;
   margin: 0 auto;
+}
+
+.slogan-bottom img{
+  display: block;
   padding-top: 56px;
+  max-width: 100%;
+  height: auto;
 }
 
 .intro::after {
@@ -231,7 +250,7 @@ body {
   box-sizing: border-box;
   min-height: 256px;
 
-  padding: 53px 6% 20px;
+  padding: 53px 5% 20px;
 
   text-align: center;
 }
@@ -240,8 +259,11 @@ body {
   font-size: 21px;
   font-weight: 700;
   line-height: 25px;
+  max-width: 180px;
+
 
   margin: 0;
+  margin: 0 auto;
   padding: 0;
   margin-bottom: 22px;
 
@@ -279,7 +301,7 @@ body {
 
   /* Правильно ли я указал эти параметры? */
   max-width: 100%;
-  height: 256px;
+  height: auto;
 }
 
 /*                              Блок с иконками                              */
